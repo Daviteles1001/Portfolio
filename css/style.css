@@ -192,6 +192,22 @@ span {
    margin: 2rem 0 3rem;
 }
 
+.flags {
+   width: 75px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.flags__item {
+   width: 30px;
+   margin-left: 15px;
+}
+
+.flags__img {
+   display: block;
+   cursor:pointer;
+}
 
 .portfolio {
    background: var(--second-bg-color);
@@ -547,4 +563,13 @@ gap: 2.5rem;
 }
 .remove{
    display: none;
+}
+
+.test {
+   display: flex;
+   flex-direction: row;
+
+}
+.test-h3 {
+   margin-right: 12px;
 }

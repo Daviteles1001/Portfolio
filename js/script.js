@@ -52,10 +52,32 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 /*==================== typed js ====================*/
+
 const typed = new Typed('.multiple-text', {
-    strings: ['Desenvolvedor Fullstack', 'Area Front End', 'Area Back End'],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
-});
+  strings: ['Desenvolvedor Fullstack', 'Area Front End', 'Area Back End'],
+  typeSpeed:100,
+  backSpeed:100,
+  backDelay:1000,
+  loop:true,
+ });
+
+  /*Linguagemmmm */
+
+    const flagsElement = document.getElementById("flags");
+    
+    const textsToChange = document.querySelectorAll("[data-section]");
+    
+    const changeLanguage = async (language) => {
+        const requestJson = await fetch(`./languages/${language}.json`);
+        const texts = await requestJson.json();
+        
+        for (const textToChange of textsToChange) {
+            const section = textToChange.dataset.section;
+            const value = textToChange.dataset.value;
+            
+            textToChange.innerHTML = texts[section][value];
+        }
+    };
+    flagsElement.addEventListener("click", (e) => {
+        changeLanguage(e.target.parentElement.dataset.language);
+    });
