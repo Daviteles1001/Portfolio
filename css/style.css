@@ -465,6 +465,7 @@ gap: 2.5rem;
 @media (max-width: 450px) {
    html {
       font-size: 50%;
+     
    }
 
    .contact form .input-box input {
@@ -573,3 +574,96 @@ gap: 2.5rem;
 .test-h3 {
    margin-right: 12px;
 }
+
+@media screen and (max-width: 430px) {
+
+   .flags__item {
+      justify-content: center;
+       flex-direction: column;
+      width: 13%;
+   }
+ 
+   /*Habilidades*/
+   .habilidades {
+       width: 90%;
+   }
+   .habilidades-texto {
+       font-size: 1.3rem;
+   }
+   .habilidades-cards {
+       padding-top: 280px;
+   }
+   .card {
+       width: 135px;
+       height: 135px;
+   }
+
+}
+
+@media screen and (max-width: 700px) {
+   /*Cabecalho*/
+   .flags__item {
+      justify-content: center;
+      flex-direction: column;
+     width: 13%;
+   }
+
+   /*Habilidades*/
+   .habilidades-bg{
+       padding: 60px 0;
+   }
+
+   .habilidades-bg h2{
+       text-align: center;
+       margin: 0;
+       padding: 50px 0 10px 0;
+   }
+   .card i{
+       width: 140px;
+       height: 140px; 
+   }
+   .habilidades-texto{
+       font-size: 1.4rem;
+   }
+   .con-like{
+       right: 0;
+   }
+
+}
+
+@media screen and (max-width: 1200px) {
+   .flags__item {
+      justify-content: center;
+      flex-direction: column;
+     width: 13%;
+   }
+   /*Habilidade*/
+   .habilidades{
+       width: 80%;
+       margin: 20px auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-direction: column;
+   }
+   .habilidades-bg h2{
+       text-align: center;
+       margin: 0;
+       padding: 50px 0;
+   }
+   .habilidades-cards{
+       justify-content: center;
+       max-width: 100%;
+       padding-top: 250px;
+   }
+   .habilidades-cards > .card:nth-child(4){
+       order: 1;
+   }
+   .habilidades-texto{
+       margin: 0px;
+       flex: 1 1 00px; 
+       max-height: 10px;
+   }
+
+}    
+
